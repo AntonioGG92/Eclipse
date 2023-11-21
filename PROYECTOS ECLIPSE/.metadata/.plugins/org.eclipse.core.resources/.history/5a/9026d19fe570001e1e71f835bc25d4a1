@@ -1,0 +1,51 @@
+import java.util.Scanner;
+
+public class Ejercicio2 {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		 Scanner leer = new Scanner(System.in);
+		// Definimos dos números que queremos comprobar si son amigos.
+	        int numero1;
+	        int numero2;
+	        System.out.println("Dime un numero");
+	        numero1 = leer.nextInt();
+	        System.out.println("Dime otro numero");
+	        numero2 = leer.nextInt();
+	        // Inicializamos variables para calcular las sumas de los divisores propios.
+	        int sumaDivisores1 = 0;
+	        int sumaDivisores2 = 0;
+
+	        // Calculamos la suma de los divisores propios del primer número (numero1).
+	        for (int i = 1; i <= numero1 / 2; i++) {
+	            // Verificamos si i es un divisor de numero1.
+	            if (numero1 % i == 0) {
+	                // Si lo es, agregamos i a la suma de divisores propios.
+	                sumaDivisores1 += i;
+	            }
+	        }
+
+	        // Calculamos la suma de los divisores propios del segundo número (numero2).
+	        for (int i = 1; i <= numero2 / 2; i++) {
+	            // Verificamos si i es un divisor de numero2.
+	            if (numero2 % i == 0) {
+	                // Si lo es, agregamos i a la suma de divisores propios.
+	                sumaDivisores2 += i;
+	            }
+	        }
+
+	        // Comparamos las sumas de divisores propios con los números originales.
+	        if (sumaDivisores1 == numero2 && sumaDivisores2 == numero1) {
+	            // Si las sumas son iguales entre sí y coinciden con los números originales,
+	            // entonces los números son amigos.
+	            System.out.println(numero1 + " y " + numero2 + " son números amigos.");
+	        } else {
+	            // Si las sumas no son iguales, los números no son amigos.
+	            System.out.println(numero1 + " y " + numero2 + " no son números amigos.");
+	        }
+	        
+	 
+			 
+		 }
+	}
+

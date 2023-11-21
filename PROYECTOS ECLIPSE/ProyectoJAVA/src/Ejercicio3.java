@@ -1,0 +1,30 @@
+import java.util.Scanner;
+
+public class Ejercicio3 {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		Scanner leer=new Scanner(System.in);
+		
+		int numero;
+		int factorial;
+		
+		System.out.println("Dime un numero");
+		
+		numero = leer.nextInt();
+		
+		factorial = 1;	
+		if (numero == 0) {
+			factorial = 0;
+			
+		}else if(numero <0 ){
+		System.out.println("Ese no es un numero válido");
+		}else{
+			for	(int i = 1; i <= numero; i++) {
+				factorial *= i;
+		}
+		System.out.println("El factorial es: " +factorial);
+	}
+		leer.close();
+}
+}

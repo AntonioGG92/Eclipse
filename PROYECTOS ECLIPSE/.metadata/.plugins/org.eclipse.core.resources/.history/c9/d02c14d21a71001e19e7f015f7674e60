@@ -1,0 +1,21 @@
+
+public class Ejercicio8 {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		// Definir la cantidad en euros
+        double euros = 100.0; // Puedes cambiar el valor a convertir
+
+        // Definir el valor de 1 euro en pesetas
+        double valorEuroEnPesetas = 166.386;
+
+        // Realizar la conversión
+        double pesetas = euros * valorEuroEnPesetas;
+
+        // Mostrar el resultado
+        System.out.println(euros + " euros equivalen a " + pesetas + " pesetas.");
+    }
+}
+	}
+
+}

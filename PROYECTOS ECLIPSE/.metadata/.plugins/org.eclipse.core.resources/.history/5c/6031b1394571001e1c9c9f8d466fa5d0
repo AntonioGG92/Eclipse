@@ -1,0 +1,34 @@
+import java.util.Scanner;
+
+public class actividad1 {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		Scanner scanner = new Scanner(System.in);
+        System.out.print("Ingrese la base del triángulo: ");
+        int base = scanner.nextInt();
+
+        // Dibuja la parte superior del triángulo
+        for (int i = 1; i < base; i++) {
+            for (int j = 1; j <= i; j++) {
+                if (j == 1 || j == i) {
+                    System.out.print("*");
+                } else {
+                    System.out.print(" ");
+                }
+            }
+            System.out.println();
+        }
+
+        // Dibuja la base del triángulo
+        for (int i = 1; i <= base; i++) {
+            System.out.print("*");
+        }
+
+        System.out.println();
+    }
+}
+
+	
+	
+

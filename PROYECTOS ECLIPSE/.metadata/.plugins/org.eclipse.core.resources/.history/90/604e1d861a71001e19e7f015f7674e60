@@ -1,0 +1,43 @@
+import java.util.Scanner;
+
+public class Ejercicio7 {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		  Scanner sc = new Scanner(System.in);
+	        System.out.print("Ingrese la altura de la pirámide: ");
+	        int altura = sc.nextInt();
+
+	        // Primera versión: Pirámide invertida rellena de asteriscos
+	        System.out.println("Primera versión: Pirámide invertida rellena de asteriscos");
+	        for (int i = altura; i >= 1; i--) {
+	            for (int j = 0; j < altura - i; j++) {
+	                System.out.print(" ");
+	            }
+	            for (int j = 1; j <= 2 * i - 1; j++) {
+	                System.out.print("*");
+	            }
+	            System.out.println();
+	        }
+
+
+	        // Segunda versión: Pirámide invertida con solo el contorno
+	        System.out.println("Segunda versión: Pirámide invertida con solo el contorno");
+	        for (int i = 1; i <= altura; i++) {
+	            for (int j = 1; j < i; j++) {
+	                System.out.print(" ");
+	            }
+	            System.out.print("*");
+	            for (int j = 1; j <= 2 * (altura - i) - 1; j++) {
+	                if (j == 1 || j == 2 * (altura - i) - 1) {
+	                    System.out.print("*");
+	                } else {
+	                    System.out.print(" ");
+	                }
+	            }
+	            System.out.println();
+	        }
+	    }
+	}
+	}
+

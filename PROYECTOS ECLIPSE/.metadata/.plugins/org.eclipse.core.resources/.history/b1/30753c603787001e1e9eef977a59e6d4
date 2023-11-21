@@ -1,0 +1,22 @@
+import java.util.*;
+public class Practica9 {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+		Scanner leer = new Scanner(System.in);
+		
+		System.out.println("Dime la distancia en km de tu recorrido en bicicleta ");
+			
+		int distancia = leer.nextInt();
+		
+		System.out.println("Dime la velocidad constante a la que irás ");
+		
+		int velocidad = leer.nextInt();
+			
+		int tiempo = distancia/velocidad;
+		
+		System.out.println("El tiempo que tardarás en llegar será de : " + tiempo + " HORAS ");
+	}
+
+}

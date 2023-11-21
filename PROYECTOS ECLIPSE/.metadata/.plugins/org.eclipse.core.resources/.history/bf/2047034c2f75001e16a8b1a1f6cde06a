@@ -1,0 +1,30 @@
+import java.util.Scanner;
+
+public class Ejercicio1 {
+
+	private static final int CONTRASEÑA = 9444;
+	
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+        Scanner leer = new Scanner(System.in);
+        int intento = 4;
+        int clave;
+        boolean caja = false;
+        while(caja == false && intento == 4) {
+        	clave = leer.nextInt();
+        	if(clave == CONTRASEÑA ) {
+        	caja = true;
+        	}
+        	else {
+        		intento--;
+        	}
+    } 
+	if(caja) {
+		System.out.println("Caja Abierta");
+	}
+	else {
+		System.out.println("La caja esta bloqueada");
+		leer.close();
+	   }  
+    }
+}

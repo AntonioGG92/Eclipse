@@ -1,0 +1,48 @@
+import java.util.Scanner;
+
+public class actividad1 {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		   Scanner leer = new Scanner(System.in);
+	        System.out.print("Ingrese la base del triángulo: ");
+	        int base = leer.nextInt();
+	        leer.close();
+
+	        // Pirámide rellena de asteriscos
+	        for (int i = 1; i <= base; i++) {
+	            // Espacios en blanco
+	            for (int j = 1; j <= base - i; j++) {
+	                System.out.print(" ");
+	            }
+
+	            // Asteriscos
+	            for (int k = 1; k <= 2 * i - 1; k++) {
+	                System.out.print("*");
+	            }
+
+	            System.out.println();
+	        }
+
+	        // Pirámide invertida con bordes de asteriscos
+	        for (int i = 1; i <= base; i++) {
+	            if (i == base || i == 1) {
+	                // Imprime una fila completa de asteriscos si es el primer o último nivel
+	                for (int j = 1; j <= base; j++) {
+	                    System.out.print("*");
+	                }
+	            } else {
+	                // Si no es el primer o último nivel, imprime solo un asterisco al principio y al final
+	                System.out.print("*");
+	                for (int j = 2; j < base; j++) {
+	                    System.out.print(" ");
+	                }
+	                System.out.print("*");
+	            }
+	            System.out.println();
+	        }
+	    }
+	}
+	
+	
+

@@ -1,0 +1,24 @@
+
+public class Ejercicio5 {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+		int altura = 5; // Altura de la pirámide (puedes ajustarla)
+        
+        for (int i = 1; i <= altura; i++) {
+            // Imprime espacios en blanco para alinear los asteriscos
+            for (int j = 1; j <= altura - i; j++) {
+                System.out.print(" ");
+            }
+            
+            // Imprime asteriscos
+            for (int k = 1; k <= 2 * i - 1; k++) {
+                System.out.print("*");
+            }
+            
+            // Salto de línea para la siguiente fila
+            System.out.println();
+        }
+    }
+}

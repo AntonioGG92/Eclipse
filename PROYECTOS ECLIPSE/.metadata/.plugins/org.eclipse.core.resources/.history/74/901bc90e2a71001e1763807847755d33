@@ -1,0 +1,38 @@
+import java.util.Scanner;
+
+public class actividad1 {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		  Scanner leer = new Scanner(System.in);
+	        System.out.print("Ingrese el tamaño de la base de la pirámide: ");
+	        int tamanobase = leer.nextInt();
+	        leer.close();
+
+	        for (int i = 1; i <= tamanobase; i++) {
+	            // Imprimir espacios en blanco en la parte izquierda de la pirámide
+	            for (int j = 1; j <= tamanobase - i; j++) {
+	                System.out.print(" ");
+	            }
+
+	            // Imprimir asterisco en la primera y última fila
+	            if (i == 1 || i == tamanobase) {
+	                for (int k = 1; k <= 2 * i - 1; k++) {
+	                    System.out.print("*");
+	                }
+	            } else {
+	                // Imprimir asterisco y espacios en blanco en el interior de la pirámide
+	                System.out.print("*");
+	                for (int k = 1; k <= 2 * i - 3; k++) {
+	                    System.out.print(" ");
+	                }
+	                System.out.print("*");
+	            }
+
+	            System.out.println(); // Salto de línea para pasar a la siguiente fila
+	        }
+	    }
+	
+	}
+
+

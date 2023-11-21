@@ -1,0 +1,28 @@
+import java.util.Scanner;
+
+public class Ejercicio6 {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		Scanner scanner = new Scanner(System.in);
+        System.out.print("Ingrese el tamaño de la base de la pirámide: ");
+        int tamanoBase = scanner.nextInt();
+
+        for (int i = 1; i <= tamanoBase; i++) {
+            for (int j = i; j < tamanoBase; j++) {
+                System.out.print(" ");
+            }
+            for (int k = 1; k <= (2 * i - 1); k++) {
+                if (k == 1 || k == (2 * i - 1) || i == tamanoBase) {
+                    System.out.print("*");
+                } else {
+                    System.out.print(" ");
+                }
+            }
+            System.out.println();
+        }
+    }
+}
+	}
+
+}

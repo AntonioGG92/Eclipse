@@ -1,0 +1,18 @@
+import java.util.*;
+public class Practica4 {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		
+		Scanner leer = new Scanner(System.in);
+		
+		System.out.println("Cuantas horas vas a estar en la habitación? ");
+			
+		double horas = leer.nextDouble();
+		
+		System.out.println("Sabiendo que el precio por hora de la habitación es : 4 euros ");
+		
+		
+	} 
+
+}

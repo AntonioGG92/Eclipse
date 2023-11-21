@@ -1,0 +1,15 @@
+import java.util.Scanner;
+
+public class actividad1 {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		Scanner leer = new Scanner (System.in);
+		
+		Scanner sc = null;
+		double  num1 = sc.nextDouble();
+		double num2= sc.nextDouble();
+		
+	}
+
+}
