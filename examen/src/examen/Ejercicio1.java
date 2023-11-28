@@ -60,7 +60,7 @@ public class Ejercicio1 {
                     break;
 
                 case 6:
-                    int potencia = (int) Math.pow(numero1, numero2);// Hola
+                    int potencia = (int) Math.pow(numero1, numero2);
                     System.out.println(potencia);
                     break;
 

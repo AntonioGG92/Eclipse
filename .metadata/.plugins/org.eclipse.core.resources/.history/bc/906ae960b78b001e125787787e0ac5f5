@@ -1,0 +1,49 @@
+public class Ejercicio3 {
+
+	public static void main(String[] args) {
+		
+		int filas = 6;
+		int columnas = 10;
+		int[][] numeros = new int[filas][columnas];
+
+		for (int i = 0; i < filas; i++) {
+			for (int j = 0; j < columnas; j++) {
+
+				numeros[i][j] = (int) (Math.random() *1001);	
+			}
+		}
+		int maxFilas = 0;
+		int minFilas = 0;
+		int maxColum = 0;
+		int minColum = 0;
+		int maximo = numeros[0][0];
+		int minimo = numeros[0][0];
+
+		for (int i = 0; i < filas; i++) {
+			for (int j = 0; j < columnas; j++) {
+
+				if (numeros[i][j] < minimo) {
+					minimo = numeros[i][j];
+					minFilas = i;
+					minColum = j;
+				}
+				if (numeros[i][j] > maximo) {
+					maximo = numeros[i][j];
+					maxFilas = i;
+					maxColum = j;
+				}
+			}
+		}
+		for (int i = 0; i < filas; i++) {
+			for (int j = 0; j < columnas; j++) {
+				System.out.print(numeros[i][j] + "\t");
+			}
+			System.out.println();
+		} 
+		System.out.println();
+		System.out.println(
+				"El máximo es " + maximo + " y esta en la posición (" + (maxFilas+1) + "," + (maxColum+1) + ")");
+		System.out.println(
+				"El mínimo es " + minimo + " y se encuentra en la posición (" + (minFilas+1) + "," + (minColum+1) + ")");
+	}
+}

@@ -1,0 +1,36 @@
+import java.util.*;
+
+public class Ejercicio4 {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+		int filas = 6;
+		int columnas = 10;
+		int[][] numeros = new int[filas][columnas];
+		Set<Integer> numerosGenerados = new HashSet<>();
+
+		for (int i = 0; i < filas; i++) {
+			for (int j = 0; j < columnas; j++) {
+				int numeroAleatorio;
+
+				do {
+					numeroAleatorio = (int) (Math.random() * 60);
+				} while (numerosGenerados.contains(numeroAleatorio));
+
+				numeros[i][j] = numeroAleatorio;
+				numerosGenerados.add(numeroAleatorio);
+			}
+		}
+
+
+		for (int i = 0; i < filas; i++) {
+			for (int j = 0; j < columnas; j++) {
+				System.out.print(numeros[i][j] + "\t");
+			}
+			System.out.println();
+		}
+	}
+}
+
+

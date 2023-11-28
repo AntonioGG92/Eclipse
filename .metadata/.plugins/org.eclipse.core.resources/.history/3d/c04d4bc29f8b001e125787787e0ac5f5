@@ -1,0 +1,122 @@
+import java.util.*;
+
+public class Ejercicio6 {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+		Scanner leer = new Scanner(System.in);
+		
+		char[][] tablero = new char[3][3];
+		char jugador = 'X';
+		char ordenador = 'O';
+		boolean juegoTerminado = false;
+
+		for (int fila = 0; fila < 3; fila++) {
+			for (int columna = 0; columna < 3; columna++) {
+				tablero[fila][columna] = ' ';
+			}
+		}
+
+		while (!juegoTerminado) {
+			for (int fila = 0; fila < 3; fila++) {
+				for (int columna = 0; columna < 3; columna++) {
+					System.out.print("[" + tablero[fila][columna] + "]");
+				}
+				System.out.println();
+			}
+
+			
+			System.out.println("Jugador 1, introduce una posición (fila 0-2 columna a-c):");
+			int filaJugador1 = leer.nextInt();
+			String columnaJugador1 = leer.next();
+
+			int indiceColumnaJugador1;
+			switch (columnaJugador1) {
+			case "a":
+				indiceColumnaJugador1 = 0;
+				break;
+			case "b":
+				indiceColumnaJugador1 = 1;
+				break;
+			case "c":
+				indiceColumnaJugador1 = 2;
+				break;
+			default:
+				System.out.println("Columna inválida. Inténtalo de nuevo.");
+				return;
+			}
+
+			if (filaJugador1 >= 0 && filaJugador1 < 3 && indiceColumnaJugador1 >= 0 && indiceColumnaJugador1 < 3
+					&& tablero[filaJugador1][indiceColumnaJugador1] == ' ') {
+				tablero[filaJugador1][indiceColumnaJugador1] = jugador;
+			} else if (tablero[filaJugador1][indiceColumnaJugador1] != ' ') {
+				System.out.println("Hueco ocupado. Elige otra posición.");
+				continue;
+			} else {
+				System.out.println("Posición inválida. Inténtalo de nuevo.");
+				continue;
+			}
+
+			if (tablero[0][0] == jugador && tablero[0][1] == jugador && tablero[0][2] == jugador
+					|| tablero[1][0] == jugador && tablero[1][1] == jugador && tablero[1][2] == jugador
+					|| tablero[2][0] == jugador && tablero[2][1] == jugador && tablero[2][2] == jugador
+					|| tablero[0][0] == jugador && tablero[1][0] == jugador && tablero[2][0] == jugador
+					|| tablero[0][1] == jugador && tablero[1][1] == jugador && tablero[2][1] == jugador
+					|| tablero[0][2] == jugador && tablero[1][2] == jugador && tablero[2][2] == jugador
+					|| tablero[0][0] == jugador && tablero[1][1] == jugador && tablero[2][2] == jugador
+					|| tablero[0][2] == jugador && tablero[1][1] == jugador && tablero[2][0] == jugador) {
+
+				System.out.println("¡Jugador ha ganado!");
+
+
+				for (int fila = 0; fila < 3; fila++) {
+					for (int columna = 0; columna < 3; columna++) {
+						System.out.print("[" + tablero[fila][columna] + "]");
+					}
+					System.out.println();
+				}
+
+				juegoTerminado = true;
+				break;
+			}
+			Random rand = new Random();
+			int filaOrdenador = rand.nextInt(3);
+			int columnaOrdenador = rand.nextInt(3);
+
+			while (tablero[filaOrdenador][columnaOrdenador] != ' ') {
+				filaOrdenador = rand.nextInt(3);
+				columnaOrdenador = rand.nextInt(3);
+			}
+
+			tablero[filaOrdenador][columnaOrdenador] = ordenador;
+
+			if (tablero[0][0] == ordenador && tablero[0][1] == ordenador && tablero[0][2] == ordenador
+					|| tablero[1][0] == ordenador && tablero[1][1] == ordenador && tablero[1][2] == ordenador
+					|| tablero[2][0] == ordenador && tablero[2][1] == ordenador && tablero[2][2] == ordenador
+					|| tablero[0][0] == ordenador && tablero[1][0] == ordenador && tablero[2][0] == ordenador
+					|| tablero[0][1] == ordenador && tablero[1][1] == ordenador && tablero[2][1] == ordenador
+					|| tablero[0][2] == ordenador && tablero[1][2] == ordenador && tablero[2][2] == ordenador
+					|| tablero[0][0] == ordenador && tablero[1][1] == ordenador && tablero[2][2] == ordenador
+					|| tablero[0][2] == ordenador && tablero[1][1] == ordenador && tablero[2][0] == ordenador) {
+
+				System.out.println("¡Ordenador ha ganado!");
+
+				for (int fila = 0; fila < 3; fila++) {
+					for (int columna = 0; columna < 3; columna++) {
+						System.out.print("[" + tablero[fila][columna] + "]");
+					}
+					System.out.println();
+				}
+
+				juegoTerminado = true;
+				break;
+			}
+		}
+
+		if (!juegoTerminado) {
+			System.out.println("Partida finalizada.");
+		}
+	}
+
+}

@@ -1,0 +1,75 @@
+import java.util.*;
+
+public class Ejercicio1 {
+
+    public static void main(String[] args) {
+        // Se crea un conjunto (HashSet) para almacenar los números generados
+        Set<Integer> lista = new HashSet<>();
+        
+        // Se crea un arreglo de enteros para almacenar los números de la primitiva
+        int[] vector = new int[8];
+        
+        // Variables auxiliares
+        int aux, i;
+        boolean existe;
+
+        // Bucle principal que se ejecuta una vez
+        do {
+            // Encabezado
+            System.out.println("---- APUESTA PRIMITIVA SENCILLA -----");
+            System.out.println();
+            System.out.println("-----------------------------------");
+
+            // Generación de los primeros 6 números
+            System.out.print("Números     ");
+            for (i = 0; i < 6; i++) {
+                existe = false;
+                
+                // Bucle para generar números únicos
+                while (!existe) {
+                    aux = (int) (Math.random() * 50);
+                    
+                    // Verificación de duplicados
+                    if (!lista.contains(aux)) {
+                        lista.add(aux);
+                        vector[i] = aux;
+                        existe = true;
+                    }
+                }
+                System.out.print(vector[i] + "--");
+            }
+            
+            // Generación del reintegro
+            vector[6] = (int) (Math.random() * 10);
+            System.out.print(vector[6]);
+            System.out.println();
+            System.out.println();
+            
+            // Impresión del reintegro
+            System.out.print("Reintegro:          ");
+            System.out.print(vector[6]);
+            System.out.println();
+            System.out.println();
+
+            // Generación del complementario
+            System.out.print("Complementario:     ");
+            existe = false;
+            
+            // Bucle para generar el complementario
+            while (!existe) {
+                aux = (int) (Math.random() * 50);
+                
+                // Verificación de duplicados
+                if (!lista.contains(aux)) {
+                    lista.add(aux);
+                    vector[7] = aux;
+                    existe = true;
+                }
+            }
+            System.out.print(vector[7]);
+            System.out.println();
+            System.out.println("----------------------------------");
+
+        } while (false); // La condición siempre es falsa, por lo que el bucle se ejecuta solo una vez
+    }
+}
