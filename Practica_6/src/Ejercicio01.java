@@ -1,23 +1,18 @@
-package practicas_de_ejercicios;
-import java.util.Scanner;
+import java.util.*;
 public class Ejercicio01 {
 
 	public static void main(String[] args) {
-		// TODO Auto-generated method stub
-
-		Scanner scanner = new Scanner(System.in);
+	
+		Scanner leer = new Scanner(System.in);
         int[][] numeros = new int[4][5];
         int[] sumaFila = new int[4];
         int[] sumaColumna = new int[6];
 
-        // Pide al usuario los datos
-        pedirNumeros(scanner, numeros, sumaFila, sumaColumna);
+        pedirNumeros(leer, numeros, sumaFila, sumaColumna);
 
-        // imprime las filas y columnas  del array
         imprimirTabla(numeros, sumaFila, sumaColumna);
     }
 
-    // Función para pedir números al usuario
     public static void pedirNumeros(Scanner scanner, int[][] numeros, int[] sumaFila, int[] sumaColumna) {
         System.out.println("Escribe 20 numeros.");
         for (int i = 0; i < 4; i++) {
@@ -31,7 +26,6 @@ public class Ejercicio01 {
         }
     }
 
-    // Función para imprimir la tabla de filas y columnas
     public static void imprimirTabla(int[][] numeros, int[] sumaFila, int[] sumaColumna) {
         System.out.printf("%12s %10s %10s %10s %10s %10s %10s", "", "Columna 1", "Columna 2", "Columna 3", "Columna 4",
                 "Columna 5", "Suma Fila");
@@ -55,5 +49,4 @@ public class Ejercicio01 {
         }
     }
 }
-
 

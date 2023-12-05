@@ -1,27 +1,24 @@
-package practicas_de_ejercicios;
 import java.util.Random;
 import java.util.Scanner;
+
 public class Ejercicio07 {
 
 	public static void main(String[] args) {
-		// TODO Auto-generated method stub
+		
 		   int[] numeros = generarNumerosAleatorios(100, 0, 20);
 
-	        // Muestra los números generados
 	        System.out.println("Números generados:");
 	        mostrarNumeros(numeros);
 
-	        // pide por teclado los valores
-	        Scanner scanner = new Scanner(System.in);
+	        Scanner leer = new Scanner(System.in);
+	        
 	        System.out.print("Ingrese el primer valor a cambiar: ");
-	        int primerValor = scanner.nextInt();
+	        int Valor1 = leer.nextInt();
 	        System.out.print("Ingrese el segundo valor: ");
-	        int segundoValor = scanner.nextInt();
+	        int Valor2 = leer.nextInt();
 
-	        // Cambia el primer valor por el segundo
-	        cambiarValores(numeros, primerValor, segundoValor);
+	        cambiarValores(numeros, Valor1, Valor2);
 
-	        // printea la lista de cambios
 	        System.out.println("Lista con cambios:");
 	        mostrarNumeros(numeros);
 	    }
@@ -54,6 +51,3 @@ public class Ejercicio07 {
 	        System.out.println();
 	    }
 	}
-	
-
-

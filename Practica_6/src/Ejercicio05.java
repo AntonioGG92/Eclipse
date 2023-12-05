@@ -1,6 +1,4 @@
-package practicas_de_ejercicios;
-
-import java.util.Scanner;
+import java.util.*;
 
 public class Ejercicio05 {
 
@@ -13,7 +11,6 @@ public class Ejercicio05 {
 			realizarMovimiento(tablero, jugadorActual);
 
 			if (haGanado(tablero, jugadorActual)) {
-				System.out.println("¡Jugador " + jugadorActual + " ha ganado!");
 				break;
 			}
 
