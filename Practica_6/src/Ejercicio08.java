@@ -11,7 +11,9 @@ public class Ejercicio08 {
     }
 
     public static int[] pedirTemperaturas() {
+    	
         Scanner leer = new Scanner(System.in);
+        
         int[] temperaturas = new int[12];
 
         for (int i = 0; i < 12; i++) {

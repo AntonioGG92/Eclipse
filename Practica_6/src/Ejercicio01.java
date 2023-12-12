@@ -5,12 +5,12 @@ public class Ejercicio01 {
 	
 		Scanner leer = new Scanner(System.in);
         int[][] numeros = new int[4][5];
-        int[] sumaFila = new int[4];
-        int[] sumaColumna = new int[6];
+        int[] sFila = new int[4];
+        int[] sColumna = new int[6];
 
-        pedirNumeros(leer, numeros, sumaFila, sumaColumna);
+        pedirNumeros(leer, numeros, sFila, sColumna);
 
-        imprimirTabla(numeros, sumaFila, sumaColumna);
+        imprimirTabla(numeros, sFila, sColumna);
     }
 
     public static void pedirNumeros(Scanner scanner, int[][] numeros, int[] sumaFila, int[] sumaColumna) {

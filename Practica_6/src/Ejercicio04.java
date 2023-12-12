@@ -6,10 +6,10 @@ public class Ejercicio04 {
 		Scanner leer = new Scanner(System.in);
 
 		System.out.print("Ingresa la posicion del alfil (de A-H): ");
-		String posicionAlfil = leer.next();
+		String pAlfil = leer.next();
 
-		ArrayList movimientos = obtenerMovimientosAlfil(posicionAlfil);
-		System.out.println("Los movimientos posibles del alfil en " + posicionAlfil + " son: ");
+		ArrayList movimientos = obtenerMovimientosAlfil(pAlfil);
+		System.out.println("Los movimientos posibles del alfil en " + pAlfil + " son: ");
 		mostrarMovimientos(movimientos);
 	}
 
@@ -47,8 +47,8 @@ public class Ejercicio04 {
 	}
 
 	public static String convertirCoordenadasAPosicion(int fila, int columna) {
-		char letraColumna = (char) (columna - 1 + 'a');
-		return letraColumna + Integer.toString(fila);
+		char lColumna = (char) (columna - 1 + 'a');
+		return lColumna + Integer.toString(fila);
 	}
 
 	public static int obtenerFilaDesdePosicion(String posicion) {

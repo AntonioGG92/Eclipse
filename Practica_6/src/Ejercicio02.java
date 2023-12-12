@@ -6,12 +6,12 @@ public class Ejercicio02 {
 		Scanner leer = new Scanner(System.in);
 		
 		int[][] numeros = new int[4][5];
-		int[] sumaFila = new int[4];
-		int[] sumaColumna = new int[6];
+		int[] sFila = new int[4];
+		int[] sColumna = new int[6];
 
 		generarNumerosAleatorios(numeros);
 
-		imprimirTabla(numeros, sumaFila, sumaColumna);
+		imprimirTabla(numeros, sFila, sColumna);
 	}
 
 	public static int generarNumeroAleatorio() {

@@ -4,13 +4,13 @@ public class Ejercicio05 {
 
 	public static void main(String[] args) {
 		char[][] tablero = new char[][] { { ' ', ' ', ' ' }, { ' ', ' ', ' ' }, { ' ', ' ', ' ' } };
-		char jugadorActual = 'X';
+		char jActual = 'X';
 
 		while (true) {
 			mostrarTablero(tablero);
-			realizarMovimiento(tablero, jugadorActual);
+			realizarMovimiento(tablero, jActual);
 
-			if (haGanado(tablero, jugadorActual)) {
+			if (haGanado(tablero, jActual)) {
 				break;
 			}
 
@@ -19,7 +19,7 @@ public class Ejercicio05 {
 				break;
 			}
 
-			jugadorActual = (jugadorActual == 'X') ? 'O' : 'X';
+			jActual = (jActual == 'X') ? 'O' : 'X';
 		}
 	}
 

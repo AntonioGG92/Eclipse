@@ -12,9 +12,9 @@ public class Ejercicio12 {
 
 		for (int intento = 1; intento <= 4; intento++) {
 			System.out.print("Introduce la combinacion (4 números de una sola cifra): ");
-			int[] intentoUsuario = obtenerCombinacionUsuario(leer);
+			int[] iUsuario = obtenerCombinacionUsuario(leer);
 
-			if (compararCombinaciones(combi, intentoUsuario)) {
+			if (compararCombinaciones(combi, iUsuario)) {
 				System.out.println("Caja fuerte abierta!");
 				break;
 			} else {
@@ -28,13 +28,13 @@ public class Ejercicio12 {
 	}
 
 	public static int[] obtenerCombinacionUsuario(Scanner scanner) {
-		int[] combiUsuario = new int[4];
+		int[] cUsuario = new int[4];
 
 		for (int i = 0; i < 4; i++) {
-			combiUsuario[i] = scanner.nextInt();
+			cUsuario[i] = scanner.nextInt();
 		}
 
-		return combiUsuario;
+		return cUsuario;
 	}
 
 	public static boolean compararCombinaciones(int[] combinacion1, int[] combinacion2) {

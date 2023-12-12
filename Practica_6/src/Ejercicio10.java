@@ -2,12 +2,12 @@ public class Ejercicio10 {
 
 	public static void main(String[] args) {
 
-        int resul = tirarDados();
-        System.out.println("Primera tirada: " + resul);
+        int resultado = tirarDados();
+        System.out.println("Primera tirada: " + resultado);
 
         while (!dadosIguales()) {
-            resul = tirarDados();
-            System.out.println("Siguiente tirada: " + resul);
+            resultado = tirarDados();
+            System.out.println("Siguiente tirada: " + resultado);
         }
 
         System.out.println("Ambos dados tienen el mismo valor");

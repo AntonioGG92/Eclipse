@@ -1,21 +1,20 @@
 import java.util.*;
-import java.util.Random;
+
 public class Ejercicio06 {
 
-	
 	    public static void main(String[] args) {
 	     
-	        int[] NUMERO = new int[20];
-	        int[] CUADRADO = new int[20];
-	        int[] CUBO = new int[20];
+	        int[] Numero = new int[20];
+	        int[] Cuadrado = new int[20];
+	        int[] Cubo = new int[20];
 
-	        cargarArrayAleatorio(NUMERO, 1, 100);
+	        cargarArrayAleatorio(Numero, 1, 100);
 
-	        cargarCuadrados(NUMERO, CUADRADO);
+	        cargarCuadrados(Numero, Cuadrado);
 
-	        cargarCubos(NUMERO, CUBO);
+	        cargarCubos(Numero, Cubo);
 
-	        mostrarArrays(NUMERO, CUADRADO, CUBO);
+	        mostrarArrays(Numero, Cuadrado, Cubo);
 	    }
 
 	    public static void cargarArrayAleatorio(int[] array, int min, int max) {
@@ -38,7 +37,7 @@ public class Ejercicio06 {
 	    }
 
 	    public static void mostrarArrays(int[] array1, int[] array2, int[] array3) {
-	        System.out.printf("%-15s%-15s%s%n", "NUMERO", "CUADRADO", "CUBO");
+	        System.out.printf("%-15s%-15s%s%n", "Numero", "Cuadrado", "Cubo");
 	        for (int i = 0; i < array1.length; i++) {
 	            System.out.printf("%-15d%-15d%d%n", array1[i], array2[i], array3[i]);
 	        }

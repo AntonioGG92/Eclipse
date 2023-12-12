@@ -7,11 +7,11 @@ public class Ejercicio03 {
 		System.out.println("Array generado:");
 		imprimirArrayConResaltado(array);
 
-		int[] posicionMaximo = encontrarPosicionExtremo(array, true);
-		int[] posicionMinimo = encontrarPosicionExtremo(array, false);
+		int[] pMaxima = encontrarPosicionExtremo(array, true);
+		int[] pMinima = encontrarPosicionExtremo(array, false);
 
-		System.out.println("Posicion del max: Fila " + posicionMaximo[0] + ", Columna " + posicionMaximo[1]);
-		System.out.println("Posicion del min: Fila " + posicionMinimo[0] + ", Columna " + posicionMinimo[1]);
+		System.out.println("Posicion del max: Fila " + pMaxima[0] + ", Columna " + pMaxima[1]);
+		System.out.println("Posicion del min: Fila " + pMinima[0] + ", Columna " + pMinima[1]);
 	}
 
 	public static int[][] generarArrayAleatorio(int filas, int columnas, int min, int max) {

@@ -8,25 +8,25 @@ public class Ejercicio11 {
         System.out.println("Piensa en un numero entre 0 y 100.");
 
         int intento = 1;
-        int limiteSuperior = 100;
-        int limiteInferior = 0;
+        int lSuperior = 100;
+        int lInferior = 0;
 
         while (intento <= 5) {
-            int numeroAdivinado = adivinarNumero(limiteInferior, limiteSuperior);
-            System.out.println("Es " + numeroAdivinado + " el numero que estas pensando? (s/n)");
+            int nAdivinado = adivinarNumero(lInferior, lSuperior);
+            System.out.println("Es " + nAdivinado + " el numero que estas pensando? (s/n)");
             char respuesta = leer.next().charAt(0);
 
             if (respuesta == 's' || respuesta == 'S') {
                 System.out.println("El numero ha sido adivinado");
                 break;
             } else {
-                System.out.println("El numero es mayor o menor? " + numeroAdivinado + "?");
-                char respuestaMayorMenor = leer.next().charAt(0);
+                System.out.println("El numero es mayor o menor? " + nAdivinado + "?");
+                char rMayorMenor = leer.next().charAt(0);
 
-                if (respuestaMayorMenor == 'm' || respuestaMayorMenor == 'M') {
-                    limiteSuperior = numeroAdivinado - 1;
+                if (rMayorMenor == 'm' || rMayorMenor == 'M') {
+                    lSuperior = nAdivinado - 1;
                 } else {
-                    limiteInferior = numeroAdivinado + 1;
+                    lInferior = nAdivinado + 1;
                 }
             }
 
