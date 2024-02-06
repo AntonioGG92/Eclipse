@@ -6,6 +6,7 @@
 		<item key="SmartImportRootWizardPage.STORE_NESTED_PROJECTS" value="true"/>
 		<item key="SmartImportRootWizardPage.STORE_CONFIGURE_NATURES" value="true"/>
 		<list key="org.eclipse.ui.internal.wizards.datatransfer.SmartImportRootWizardPage.knownSources">
+			<item value="G:\pen\Repositorios\Repositorio_Eclipse\PooMultimediaArray"/>
 			<item value="G:\pen\Repositorios\UD02_02"/>
 			<item value="D:\pen\Repositorios\Repositorio_Eclipse"/>
 			<item value="D:\pen\Repositorios"/>

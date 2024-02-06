@@ -1,4 +1,3 @@
-
 public class Pelicula  extends Multimedia{
 	
 	private String actorP;
